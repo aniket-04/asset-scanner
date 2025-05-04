@@ -1,0 +1,6 @@
+src/
+.git/
+node_modules/
+*.log
+*.md
+*.ts
