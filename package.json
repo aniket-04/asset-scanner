@@ -1,0 +1,35 @@
+{
+  "name": "asset-scanner",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "keywords": [],
+  "author": "Aniket Kapoor",
+  "license": "ISC",
+  "main": "dist/src/index.js",
+  "bin": {
+    "asset-scan": "./dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "build": "javascript-obfuscator ./src --output ./dist/src --compact true --self-defending true && javascript-obfuscator ./bin --output ./dist/bin --compact true --self-defending true",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "fast-glob": "^3.3.1",
+    "fs-extra": "^11.3.0",
+    "image-size": "^2.0.2",
+    "path": "^0.12.7",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.1"
+  }
+}

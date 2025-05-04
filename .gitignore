@@ -1,0 +1,24 @@
+# # Ignore source code folder
+src/
+
+# # Don't ignore dist/ folder (build outputs)
+!dist/src/
+
+# # Node.js
+node_modules/
+
+# NPM log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment files
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Don't ignore package-lock.json (keep it tracked in Git)
+!package-lock.json
+!package.json
