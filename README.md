@@ -1,6 +1,6 @@
 # 📦 `asset-scanner`
 
-A powerful CLI tool to scan and analyze all image assets in your project. Easily filter by size, type, and location. Generate reports with just one command.
+A powerful Fast and Lightweight CLI tool to scan and analyze all image assets in your project. Easily filter by size, type, and location. Generate reports with just one command.
 
 ---
 
@@ -11,7 +11,11 @@ A powerful CLI tool to scan and analyze all image assets in your project. Easily
 - 📏 Filter assets by size (`--min`, `--max` in KB, MB, Bytes)
 - 📊 Shows total assets, filtered assets, and type breakdown
 - 📄 Generates a JSON report file with asset info
-- 📌 Sort by size (ascending or descending)
+- 📌 Sort by size
+
+---
+## Supported formats
+- `png` , `jpg`, `gif`, `jpg`, `jpeg` ,`webp` , `svg`
 
 ---
 
@@ -36,8 +40,8 @@ npx asset-scan [options]
 | ---------- | ---------------------------------------------- | ----------------------------- |
 | `--path`   | Folder to scan (defaults to current directory) | `--path ./src/assets`         |
 | `--types`   | Filter by image type (comma separated)         | `--types png,jpg`              |
-| `--min`    | Minimum file size in KB (`KB`)        | `--min-size 100KB`                 |
-| `--max`    | Maximum file size in KB (`KB`)        | `--max-size 2000KB`                   |
+| `--min-size`    | Minimum file size in KB (`KB`)        | `--min-size 100KB`                 |
+| `--max-size`    | Maximum file size in KB (`KB`)        | `--max-size 2000KB`                   |
 | `--sort`   | Sort results by size         | `--sort size`                 |
 | `--save` | File name to save the report in JSON format    | `--save assets-report.json` |
 | `--stats` | Shows total assets, filtered assets, and detailed types breakdown    | `--stats` |
@@ -53,7 +57,9 @@ npx asset-scan --types png,gif --sort size --save output.json
 npx asset-scan --stats
 ```
 
-
+```bash
+npx asset-scan --min-size 1KB --max-size 1000KB
+```
 
 
 
